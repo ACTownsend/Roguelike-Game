@@ -1,2 +1,2 @@
 # Rogue
-Rogue like game written in c++
+Rogue-like game written in c++
