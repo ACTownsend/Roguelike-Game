@@ -16,7 +16,10 @@ private:
 	int _defense;
 	int _experience;
 
+
 	int _x;
 	int _y;
+
+
 };
 

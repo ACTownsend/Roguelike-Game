@@ -3,6 +3,7 @@
 #include <string>
 #include "Player.h"
 
+
 using namespace std;
 
 
@@ -17,6 +18,8 @@ public:
 	void movePlayer(char input, Player &player);
 	char getTile(int x, int y);
 	void setTile(int x, int y, char tile);
+
+	void restartGame();
 
 
 private:

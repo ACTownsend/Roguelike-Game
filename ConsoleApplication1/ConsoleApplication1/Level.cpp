@@ -98,7 +98,7 @@ void Level::movePlayer(char input, Player &player)
 		processPlayerMove(player, playerX + 1, playerY);
 		break;
 	case 27:
-		exit(0);
+		restartGame();
 		
 
 	default:
@@ -135,4 +135,12 @@ void Level::processPlayerMove(Player &player, int targetx, int targety)
 		setTile(playerX, playerY, '.');
 		setTile(targetx, targety, '@');
 	}
+}
+void Level::restartGame()
+{
+
+	GameSystem gameSystem("level1.txt");
+	gameSystem.Menu();
+
+	gameSystem.playGame();
 }

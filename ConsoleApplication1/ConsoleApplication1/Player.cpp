@@ -31,3 +31,5 @@ void Player::getPosition(int &x, int &y)
 	y = _y;
 }
 
+
+

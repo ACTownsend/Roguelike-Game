@@ -143,14 +143,7 @@ int main()
 	return 0;
 }
 
-void GameSystem::restartGame()
-{
 
-	GameSystem gameSystem("level1.txt");
-	gameSystem.Menu();
-
-	gameSystem.playGame();
-}
 
 
 
