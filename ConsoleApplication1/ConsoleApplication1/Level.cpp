@@ -11,7 +11,7 @@ Level::Level()
 }
 
 
-void Level::load(string fileName, Player &player)
+void Level::load(string fileName, Player &player)	//adam
 {	//loads level
 	ifstream file;
 
@@ -47,7 +47,7 @@ void Level::load(string fileName, Player &player)
 					player.setPosition(j, i);
 					break;
 				case 'M':
-					_monsters.push_back(monster("Monster", tile, 2,10,5,35,150));
+					_monsters.push_back(monster("Monster", tile, 2,10,10,10,150));
 					_monsters.back().setPosition(j, i);
 					break;
 
@@ -57,7 +57,7 @@ void Level::load(string fileName, Player &player)
 	}
 }
 
-void Level::print()
+void Level::print()	//adam
 {
 
 	//cout << string(100, '\n');
@@ -70,7 +70,7 @@ void Level::print()
 }
 
 
-void Level::movePlayer(char input, Player &player)
+void Level::movePlayer(char input, Player &player)		//shazzy
 {
 
 	int playerX;
@@ -109,7 +109,7 @@ void Level::movePlayer(char input, Player &player)
 	}
 }
 
-void Level::updateMonsters(Player &player)
+void Level::updateMonsters(Player &player)	//costa
 {
 	char aiMove;
 	int playerX;
@@ -144,17 +144,17 @@ void Level::updateMonsters(Player &player)
 }
 
 
-char Level::getTile(int x, int y)
+char Level::getTile(int x, int y)	//costa
 {
 	return _levelData[y][x];
 }
 
-void Level::setTile(int x, int y, char tile)
+void Level::setTile(int x, int y, char tile) //costa
 {
 	_levelData[y][x] = tile;
 }
 
-void Level::processPlayerMove(Player &player, int targetx, int targety)
+void Level::processPlayerMove(Player &player, int targetx, int targety)	//shazzy
 {
 	int playerX;
 	int playerY;
@@ -176,7 +176,7 @@ void Level::processPlayerMove(Player &player, int targetx, int targety)
 
 }
 
-void Level::processMonsterMove(Player &player, int monsterIndex, int targetx, int targety)
+void Level::processMonsterMove(Player &player, int monsterIndex, int targetx, int targety)	//costa
 {
 	int playerX;
 	int playerY;
@@ -202,7 +202,7 @@ void Level::processMonsterMove(Player &player, int monsterIndex, int targetx, in
 
 }
 
-void Level::battleMonster(Player &player, int targetx, int targety)
+void Level::battleMonster(Player &player, int targetx, int targety)	//simon
 {
 	int enemyX;
 	int enemyY;
@@ -219,10 +219,13 @@ void Level::battleMonster(Player &player, int targetx, int targety)
 
 		if (targetx == enemyX && targety == enemyY)
 		{
+
+
 			attackRoll = player.attack();
-			cout << "\nPlayer attacked monster with a roll of "<< attackRoll << endl;
+			cout << "\nPlayer attacked monster with a roll of " << attackRoll << endl;
 			system("PAUSE");
 			attackResult = _monsters[i].takeDamage(attackRoll);
+
 			if (attackResult != 0)
 			{
 				setTile(targetx, targety, '.');
@@ -238,6 +241,7 @@ void Level::battleMonster(Player &player, int targetx, int targety)
 				player.addEXP(attackResult);
 				return;
 			}
+			
 
 			//monster turn
 			attackRoll = _monsters[i].attack();
@@ -255,13 +259,17 @@ void Level::battleMonster(Player &player, int targetx, int targety)
 				restartGame();
 				return;
 			}
+			
+		
 			return;
 		}
+			
+		
 	}
 }
 
 
-void Level::restartGame()
+void Level::restartGame()	//lewis
 {
 
 	GameSystem gameSystem("level1.txt");

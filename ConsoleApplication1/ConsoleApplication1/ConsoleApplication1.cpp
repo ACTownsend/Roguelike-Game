@@ -15,7 +15,7 @@
 using namespace std;
 
 
-int GameSystem::Menu()
+int GameSystem::Menu()	//dragos
 {
 	char input;
 	string player_name;
@@ -131,7 +131,7 @@ wipe:
 
 
 
-int main()
+int main()	//adam
 {
 	
 	GameSystem gameSystem("level1.txt");

@@ -8,7 +8,7 @@
 using namespace std;
 
 
-class Level
+class Level	//adam
 {
 public:
 	Level();
@@ -25,11 +25,13 @@ public:
 	void restartGame();
 
 
+
 private:
 	vector <string> _levelData;
 	void processPlayerMove(Player &player, int targetx, int targety);
 	void processMonsterMove(Player &player, int monsterIndex, int targetx, int targety);
 	void battleMonster(Player &player, int targetx, int targety);
 	vector <monster> _monsters;
+	
 };
 

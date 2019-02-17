@@ -1,5 +1,5 @@
 #pragma once
-class Player
+class Player	//shazzy
 {
 public:
 	Player();
@@ -11,6 +11,11 @@ public:
 	int attack();
 
 	void addEXP(int experience);
+
+	int getHealth()
+	{
+		return _health;
+	}
 	int takeDamage(int attack);
 
 private:

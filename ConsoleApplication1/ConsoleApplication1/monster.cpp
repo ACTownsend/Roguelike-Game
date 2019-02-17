@@ -4,7 +4,7 @@
 #include <ctime>
 
 
-monster::monster(string name, char tile, int level, int attack, int defense, int health, int XP)
+monster::monster(string name, char tile, int level, int attack, int defense, int health, int XP)	//costa
 {
 	_name = name;
 	_tile = tile;
@@ -16,26 +16,26 @@ monster::monster(string name, char tile, int level, int attack, int defense, int
 
 }
 
-void monster::setPosition(int x, int y)
+void monster::setPosition(int x, int y)	//simon
 {
 	_x = x;
 	_y = y;
 }
 
-void monster::getPosition(int &x, int &y)
+void monster::getPosition(int &x, int &y)	//simon
 {
 	x = _x;
 	y = _y;
 }
 
-int monster::attack()
+int monster::attack()	//dragos
 {
 	static default_random_engine randomEngine(time(NULL));
 	uniform_int_distribution <int> attackRoll(0, _attack);
 	return attackRoll(randomEngine);
 }
 
-int monster::takeDamage(int attack)
+int monster::takeDamage(int attack)	//lewis
 {
 	attack -= _defense;
 	if (attack>0)
@@ -50,7 +50,7 @@ int monster::takeDamage(int attack)
 	return 0;
 }
 
-char monster::getMove(int playerX, int playerY)
+char monster::getMove(int playerX, int playerY)	//costa
 {
 	static default_random_engine randEngine(time(NULL));
 	uniform_int_distribution <int> moveRoll(0, 8);
@@ -64,7 +64,7 @@ char monster::getMove(int playerX, int playerY)
 
 	if (distance <= 5)
 	{
-		if (absDX > absDY)	//move X axis
+		if (absDX > absDY)	
 		{
 			if (dx > 0)
 			{
@@ -75,7 +75,7 @@ char monster::getMove(int playerX, int playerY)
 				return 'd';
 			}
 		}
-		else  //move Y axis
+		else  
 		{
 			if (dy > 0)
 			{

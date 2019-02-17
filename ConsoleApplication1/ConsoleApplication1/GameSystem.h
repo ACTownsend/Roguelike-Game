@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class GameSystem
+class GameSystem	//adam
 {
 public:
 	GameSystem(string levelFileName);

@@ -5,9 +5,9 @@
 
 using namespace std;
 
-GameSystem::GameSystem(string levelFileName)
+GameSystem::GameSystem(string levelFileName)	//adam
 {
-	_player.init(1, 100, 10, 10, 0);
+	_player.init(1, 20, 20, 10, 0);
 	
 	_level.load(levelFileName, _player);
 	_level.print();
@@ -15,7 +15,7 @@ GameSystem::GameSystem(string levelFileName)
 
 }
 
-void GameSystem::playGame()
+void GameSystem::playGame()	//adam
 {
 	bool isDone = false;
 
@@ -29,13 +29,13 @@ void GameSystem::playGame()
 }
 
 
-void GameSystem::playerMove()
+void GameSystem::playerMove()	//shazzy
 {
 
 
 	char input;
 
-	cout << "Enter a move command (w/a/s/d): ";
+	cout << "Enter a move command (w/a/s/d):\n ";
 	input = _getch();
 
 	_level.movePlayer(input, _player);
