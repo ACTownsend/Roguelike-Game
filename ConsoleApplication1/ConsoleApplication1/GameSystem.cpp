@@ -24,6 +24,7 @@ void GameSystem::playGame()
 		system("cls");
 		_level.print();
 		playerMove();
+		_level.updateMonsters(_player);
 	}	
 }
 

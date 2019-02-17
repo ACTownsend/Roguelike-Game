@@ -13,7 +13,6 @@ public:
 
 	void playGame();
 	void playerMove();
-	void restartGame();
 	int Menu();
 
 

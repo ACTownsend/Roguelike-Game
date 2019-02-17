@@ -8,6 +8,10 @@ public:
 	void setPosition(int x, int y);
 
 	void getPosition(int &x, int &y);
+	int attack();
+
+	void addEXP(int experience);
+	int takeDamage(int attack);
 
 private:
 	int _level;

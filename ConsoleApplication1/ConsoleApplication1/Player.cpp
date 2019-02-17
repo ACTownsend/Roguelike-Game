@@ -1,7 +1,10 @@
 #include "pch.h"
 #include "Player.h"
+#include <random>
+#include <ctime>
+#include <iostream>
 
-
+using namespace std;
 Player::Player()
 {
 	_x = 0;
@@ -31,5 +34,40 @@ void Player::getPosition(int &x, int &y)
 	y = _y;
 }
 
+void Player::addEXP(int experience)
+{
+	_experience = experience + experience;
+	while (_experience > 50)
+	{
+		cout << "You Levelled Up!\n" << endl;
+		_experience = _experience - _experience;
+		_attack = _attack + 10;
+		_level = _level++;
+		_health = _health + 10;
+		_defense = _defense + 5;
+		system("PAUSE");
+	}
+}
 
+int Player::attack()
+{
+	static default_random_engine randomEngine(time(NULL));
+	uniform_int_distribution <int> attackRoll(0, _attack);
+	return attackRoll(randomEngine);
+}
+
+int Player::takeDamage(int attack)
+{
+	attack -= _defense;
+	if (attack > 0)
+	{
+		_health = _health - attack;
+		if (_health <= 0)
+		{
+			return 1;
+		}
+	}
+
+	return 0;
+}
 
