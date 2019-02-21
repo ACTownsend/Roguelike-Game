@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include <stdio.h>
+using namespace std;
 class Player	//shazzy
 {
 public:
@@ -34,14 +34,33 @@ public:
 	{
 		return _experience;
 	}
-
-	int getStats()
+	string getStat()
 	{
-		char buffer [50];
-		int n;
-		n = sprintf(buffer, "Level: %d  Health: %d", _level, _health);
-		return n;
+		string lvl = to_string(_level);
+		string hp = to_string(_health);
+		string dmg = to_string(_attack);
+		string def = to_string(_defense);
+		string xp = to_string(_experience);
+
+
+		string stats = "Level: ";
+		stats.append(lvl);
+
+		stats.append(" Health: ");
+		stats.append(hp);
+
+		stats.append(" Attack: ");
+		stats.append(dmg);
+
+		stats.append(" Defense: ");
+		stats.append(def);
+
+		stats.append(" EXP: ");
+		stats.append(xp);
+		return stats;
 	}
+
+
 	int takeDamage(int attack);
 
 private:

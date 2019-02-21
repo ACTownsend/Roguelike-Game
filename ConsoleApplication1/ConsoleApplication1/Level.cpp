@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cstdio>
 #include "GameSystem.h"
+#include "conio.h"
 
 Level::Level()
 {
@@ -219,12 +220,23 @@ void Level::battleMonster(Player &player, int targetx, int targety)	//simon
 
 		if (targetx == enemyX && targety == enemyY)
 		{
+			cout << "1.Basic Attack\n2.Restor Health\n3.Restor Mana\n";
+			char input = _getch();
+			switch (input)
+			{
+			case 1:
+				attackRoll = player.attack();
+				cout << "\nPlayer attacked monster with a roll of " << attackRoll << endl;
+				attackResult = _monsters[i].takeDamage(attackRoll);
+			
+			default:
+				attackRoll = player.attack();
+				cout << "\nPlayer attacked monster with a roll of " << attackRoll << endl;
+				attackResult = _monsters[i].takeDamage(attackRoll);
+
+			}
 
 
-			attackRoll = player.attack();
-			cout << "\nPlayer attacked monster with a roll of " << attackRoll << endl;
-			system("PAUSE");
-			attackResult = _monsters[i].takeDamage(attackRoll);
 
 			if (attackResult != 0)
 			{
@@ -241,7 +253,6 @@ void Level::battleMonster(Player &player, int targetx, int targety)	//simon
 				player.addEXP(attackResult);
 				return;
 			}
-			
 
 			//monster turn
 			attackRoll = _monsters[i].attack();

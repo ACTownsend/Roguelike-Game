@@ -2,6 +2,7 @@
 #include "GameSystem.h"
 #include <iostream>
 #include <conio.h>
+#include <string>
 
 using namespace std;
 
@@ -36,8 +37,7 @@ void GameSystem::playerMove()	//shazzy
 	char input;
 
 	cout << "Enter a move command (w/a/s/d):\n ";
-	//cout <<"Health:"<< _player.getHealth() << " Attack:" << _player.getAttack() << " Level:" << _player.getLevel() << " Experience:" << _player.getExperience() << " Defense:" << _player.getDefense() << endl;
-	cout << _player.getStats() << endl;
+	cout << _player.getStat() << endl;
 	input = _getch();
 
 	_level.movePlayer(input, _player);

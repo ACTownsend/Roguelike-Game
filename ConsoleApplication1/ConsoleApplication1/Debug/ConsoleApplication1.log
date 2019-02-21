@@ -1,19 +1,7 @@
-﻿  ConsoleApplication1.cpp
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\player.h(42): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
-  GameSystem.cpp
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\player.h(42): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
-  Level.cpp
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\player.h(42): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(37): warning C4018: '<': signed/unsigned mismatch
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(39): warning C4018: '<': signed/unsigned mismatch
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(65): warning C4018: '<': signed/unsigned mismatch
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(123): warning C4018: '<': signed/unsigned mismatch
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(216): warning C4018: '<': signed/unsigned mismatch
-  Player.cpp
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\player.h(42): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\player.cpp(55): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
+﻿  Level.cpp
+c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(38): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(40): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(66): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(124): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(217): warning C4018: '<': signed/unsigned mismatch
+  ConsoleApplication1.vcxproj -> C:\Users\Adam\OneDrive - Coventry University\ConsoleApplication1\Debug\ConsoleApplication1.exe
