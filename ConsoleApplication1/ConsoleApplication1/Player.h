@@ -1,4 +1,6 @@
 #pragma once
+#include <string>
+#include <stdio.h>
 class Player	//shazzy
 {
 public:
@@ -12,9 +14,33 @@ public:
 
 	void addEXP(int experience);
 
-	int getHealth()
+	int getHealth()//adam
 	{
 		return _health;
+	}
+	int getAttack()//dragos
+	{
+		return _attack;
+	}
+	int getLevel()//dragos
+	{
+		return _level;
+	}
+	int getDefense()//dragos
+	{
+		return _defense;
+	}
+	int getExperience()//dragos
+	{
+		return _experience;
+	}
+
+	int getStats()
+	{
+		char buffer [50];
+		int n;
+		n = sprintf(buffer, "Level: %d  Health: %d", _level, _health);
+		return n;
 	}
 	int takeDamage(int attack);
 
