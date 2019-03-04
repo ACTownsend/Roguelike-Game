@@ -14,10 +14,11 @@ Player::Player()	//shazzy
 }
 
 
-void Player::init(int level, int health, int attack, int defense, int experience)	//shazzy
+void Player::init(int level, int health, int maxHealth, int attack, int defense, int experience)	//shazzy
 {
 	_level = level;
 	_health = health;
+	_maxHealth = maxHealth;
 	_attack = attack;
 	_defense = defense;
 	_experience = experience;
@@ -38,14 +39,14 @@ void Player::getPosition(int &x, int &y)	//shazzy
 
 void Player::addEXP(int experience)	//lewis
 {
-	_experience = experience + experience;
-	while (_experience > 50)
+	_experience = _experience + experience;
+	while (_experience >= 50)
 	{
 		cout << "You Levelled Up!\n" << endl;
-		_experience = _experience - _experience;
+		_experience = _experience - 50;
 		_attack = _attack + 10;
 		_level = _level++;
-		_health = _health + 3;
+		_maxHealth = _maxHealth + 3;
 		_defense = _defense + 5;
 		system("PAUSE");
 	}
@@ -56,6 +57,18 @@ int Player::attack()	//dragos
 	static default_random_engine randomEngine(time(NULL));
 	uniform_int_distribution <int> attackRoll(0, _attack);
 	return attackRoll(randomEngine);
+}
+
+void Player::heal() //dragos
+{
+	_health = _health + 5;
+	if (_health> _maxHealth)
+	{
+		_health = _maxHealth;
+	}
+
+	
+
 }
 
 int Player::takeDamage(int attack) //lewis

@@ -6,15 +6,17 @@
 
 using namespace std;
 
-GameSystem::GameSystem(string levelFileName)	//adam
+GameSystem::GameSystem(string levelFileName, int level, int health, int maxHealth, int attack, int defense, int experience)	//adam2
 {
-	_player.init(1, 20, 20, 5, 0);
+	_player.init(level, health, maxHealth, attack, defense, experience);
 	
 	_level.load(levelFileName, _player);
 	_level.print();
 
 
 }
+
+
 
 void GameSystem::playGame()	//adam
 {
@@ -43,6 +45,8 @@ void GameSystem::playerMove()	//shazzy
 	_level.movePlayer(input, _player);
 
 }
+
+
 
 
 

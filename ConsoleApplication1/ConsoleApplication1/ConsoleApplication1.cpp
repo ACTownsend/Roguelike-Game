@@ -7,6 +7,9 @@
 #include <conio.h>
 #include <Windows.h>
 #include <string>
+#include <random>
+#include <ctime>
+
 
 
 
@@ -66,6 +69,7 @@ wipe:
                               |___/                                                           
 )";
 		cin >> player_name;
+
 		break;
 	case '2':
 		system("cls");
@@ -131,10 +135,18 @@ wipe:
 
 
 
-int main()	//adam
+int main()	
 {
-	
-	GameSystem gameSystem("level1.txt");
+	static default_random_engine randomEngine(time(NULL));
+	uniform_int_distribution <int> levelGen(1, 5);
+	char ranlevel = levelGen(randomEngine);
+
+	string levelNo = to_string(ranlevel);
+	string level = "level";
+	level.append(levelNo);
+	level.append(".txt");
+
+	GameSystem gameSystem(level, 1, 20, 20, 20, 5, 0);
 	gameSystem.Menu();
 
 	gameSystem.playGame();

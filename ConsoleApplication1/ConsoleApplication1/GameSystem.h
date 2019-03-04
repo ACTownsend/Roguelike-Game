@@ -9,7 +9,8 @@ using namespace std;
 class GameSystem	//adam
 {
 public:
-	GameSystem(string levelFileName);
+	GameSystem(string levelFileName, int level, int health, int maxHealth, int attack, int defense, int experience);
+	
 
 	void playGame();
 	void playerMove();

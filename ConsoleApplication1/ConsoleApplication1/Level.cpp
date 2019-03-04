@@ -48,7 +48,7 @@ void Level::load(string fileName, Player &player)	//adam
 					player.setPosition(j, i);
 					break;
 				case 'M':
-					_monsters.push_back(monster("Monster", tile, 2,10,10,10,150));
+					_monsters.push_back(monster("Monster", tile, 2,10,10,10,30));
 					_monsters.back().setPosition(j, i);
 					break;
 
@@ -71,7 +71,7 @@ void Level::print()	//adam
 }
 
 
-void Level::movePlayer(char input, Player &player)		//shazzy
+void Level::movePlayer(char input, Player &player)		//lewis
 {
 
 	int playerX;
@@ -195,7 +195,8 @@ void Level::processMonsterMove(Player &player, int monsterIndex, int targetx, in
 	case'#':
 		break;
 	case'@':
-		battleMonster(player, monsterX, monsterY);
+		//battleMonster(player, monsterX, monsterY);
+		break;
 	default:
 		break;
 	}
@@ -220,21 +221,27 @@ void Level::battleMonster(Player &player, int targetx, int targety)	//simon
 
 		if (targetx == enemyX && targety == enemyY)
 		{
-			cout << "1.Basic Attack\n2.Restor Health\n3.Restor Mana\n";
+			cout << "1.Basic Attack\n2.Restore Health\n3.Restore Mana\n";
 			char input = _getch();
 			switch (input)
 			{
-			case 1:
+			case '1':
 				attackRoll = player.attack();
 				cout << "\nPlayer attacked monster with a roll of " << attackRoll << endl;
 				attackResult = _monsters[i].takeDamage(attackRoll);
-			
+				break;
+			case '2':
+				
+				player.heal();
+				cout << "You healed 5 health" << endl;
+				attackResult = 0;
+				break;
 			default:
-				attackRoll = player.attack();
-				cout << "\nPlayer attacked monster with a roll of " << attackRoll << endl;
-				attackResult = _monsters[i].takeDamage(attackRoll);
-
+				cout << "\nINVALID INPUT" << endl;
+				system("PAUSE");
+				return;
 			}
+			
 
 
 
@@ -251,6 +258,34 @@ void Level::battleMonster(Player &player, int targetx, int targety)	//simon
 
 				system("PAUSE");
 				player.addEXP(attackResult);
+				if (_monsters.empty())		//adam2
+				{
+					int a = player.getLevel();
+					int b = player.getHealth();
+					int c = player.getMaxHealth();
+					int d = player.getAttack();
+					int e = player.getDefense();
+					int f = player.getEXP();
+					cout << "\nLevel complete!" << endl;
+					system("PAUSE");
+
+					static default_random_engine randomEngine(time(NULL));
+					uniform_int_distribution <int> levelGen(0, 5);
+					char ranlevel = levelGen(randomEngine);
+
+					string levelNo = to_string(ranlevel);
+					string level = "level";
+					level.append(levelNo);
+					level.append(".txt");
+
+					GameSystem gameSystem(level, a, b, c, d, e, f);
+					
+
+					gameSystem.playGame();
+					break;
+
+				}
+
 				return;
 			}
 
@@ -271,7 +306,6 @@ void Level::battleMonster(Player &player, int targetx, int targety)	//simon
 				return;
 			}
 			
-		
 			return;
 		}
 			
@@ -280,12 +314,22 @@ void Level::battleMonster(Player &player, int targetx, int targety)	//simon
 }
 
 
-void Level::restartGame()	//lewis
+void Level::restartGame()	
 {
 
-	GameSystem gameSystem("level1.txt");
+	static default_random_engine randomEngine(time(NULL));
+	uniform_int_distribution <int> levelGen(1, 5);
+	char ranlevel = levelGen(randomEngine);
+
+	string levelNo = to_string(ranlevel);
+	string level = "level";
+	level.append(levelNo);
+	level.append(".txt");
+
+	GameSystem gameSystem(level, 1, 20, 20, 20, 5, 0);
 	gameSystem.Menu();
 
 	gameSystem.playGame();
 }
+
 

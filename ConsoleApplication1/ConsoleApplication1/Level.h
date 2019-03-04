@@ -3,6 +3,8 @@
 #include <string>
 #include "Player.h"
 #include "monster.h"
+#include <random>
+#include <ctime>
 
 
 using namespace std;
@@ -32,6 +34,7 @@ private:
 	void processMonsterMove(Player &player, int monsterIndex, int targetx, int targety);
 	void battleMonster(Player &player, int targetx, int targety);
 	vector <monster> _monsters;
+
 	
 };
 
