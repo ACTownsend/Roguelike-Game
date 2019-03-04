@@ -1,0 +1,8 @@
+﻿  ConsoleApplication1.cpp
+c:\users\raluca\source\repos\rogue-master\consoleapplication1\consoleapplication1\consoleapplication1.cpp(140): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GameSystem.cpp
+  Level.cpp
+c:\users\raluca\source\repos\rogue-master\consoleapplication1\consoleapplication1\level.cpp(298): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\raluca\source\repos\rogue-master\consoleapplication1\consoleapplication1\level.cpp(346): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  ConsoleApplication1.vcxproj -> C:\Users\Raluca\source\repos\Rogue-master\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe

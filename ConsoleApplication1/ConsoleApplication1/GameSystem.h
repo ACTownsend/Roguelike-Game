@@ -20,5 +20,6 @@ public:
 private:
 	Level _level;
 	Player _player;
+	Shop _shop;
 };
 

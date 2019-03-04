@@ -10,7 +10,7 @@ GameSystem::GameSystem(string levelFileName, int level, int health, int maxHealt
 {
 	_player.init(level, health, maxHealth, attack, defense, experience);
 	
-	_level.load(levelFileName, _player);
+	_level.load(levelFileName, _player, _shop);
 	_level.print();
 
 
