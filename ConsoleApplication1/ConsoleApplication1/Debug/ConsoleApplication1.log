@@ -1,12 +1,10 @@
-﻿  ConsoleApplication1.cpp
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\consoleapplication1.cpp(140): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Level.cpp
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(38): warning C4018: '<': signed/unsigned mismatch
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(40): warning C4018: '<': signed/unsigned mismatch
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(66): warning C4018: '<': signed/unsigned mismatch
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(124): warning C4018: '<': signed/unsigned mismatch
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(218): warning C4018: '<': signed/unsigned mismatch
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(272): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(320): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
+﻿  Level.cpp
+c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\include\libsqlite.hpp(221): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(42): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(44): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(70): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(128): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(223): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(287): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\adam\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(365): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   ConsoleApplication1.vcxproj -> C:\Users\Adam\OneDrive - Coventry University\ConsoleApplication1\Debug\ConsoleApplication1.exe

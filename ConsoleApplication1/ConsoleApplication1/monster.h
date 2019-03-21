@@ -15,7 +15,10 @@ public:
 		return _tile;		//dragos
 	}
 
-
+	int getDefense()
+	{
+		return _defense;
+	}
 
 	int attack();	//dragos
 

@@ -14,7 +14,7 @@ Player::Player()	//shazzy
 }
 
 
-void Player::init(int level, int health, int maxHealth, int attack, int defense, int experience)	//shazzy
+void Player::init(int level, int health, int maxHealth, int attack, int defense, int experience, int score)	//shazzy
 {
 	_level = level;
 	_health = health;
@@ -22,6 +22,7 @@ void Player::init(int level, int health, int maxHealth, int attack, int defense,
 	_attack = attack;
 	_defense = defense;
 	_experience = experience;
+	_score = score;
 }
 
 
@@ -85,4 +86,24 @@ int Player::takeDamage(int attack) //lewis
 
 	return 0;
 }
+
+void Player::updatescore()
+{
+	_score = _score - 1;
+	if (_score <=0)
+	{
+		_score = 0;
+	}
+}
+
+void Player::addScore()
+{
+	_score = _score + 50;
+}
+
+void Player::assignName(string player_name)
+{
+	_name = player_name;
+}
+
 

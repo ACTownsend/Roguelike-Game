@@ -5,7 +5,7 @@ class Player	//shazzy
 {
 public:
 	Player();
-	void init(int level, int health, int maxHealth, int attack, int defense, int experience);
+	void init(int level, int health, int maxHealth, int attack, int defense, int experience, int score);
 
 	void setPosition(int x, int y);
 
@@ -13,6 +13,11 @@ public:
 	int attack();
 	void heal();
 	void addEXP(int experience);
+	void updatescore();
+	void addScore();
+	void assignName(string player_name);
+
+
 
 	int getHealth()//adam2
 	{
@@ -38,6 +43,14 @@ public:
 	{
 		return _experience;
 	}
+	int getScore()//adam2
+	{
+		return _experience;
+	}
+	string getName()//adam2
+	{
+		return _name;
+	}
 
 	string getStat() //dragos2
 	{
@@ -46,9 +59,13 @@ public:
 		string dmg = to_string(_attack);
 		string def = to_string(_defense);
 		string xp = to_string(_experience);
+		string score = to_string(_score);
 
 
-		string stats = "Level: ";
+		string stats = "Name: ";
+		stats.append(_name);
+
+		stats.append(" Level: ");
 		stats.append(lvl);
 
 		stats.append(" Health: ");
@@ -62,6 +79,9 @@ public:
 
 		stats.append(" EXP: ");
 		stats.append(xp);
+
+		stats.append(" Score: ");
+		stats.append(score);
 		return stats;
 	}
 
@@ -75,6 +95,8 @@ private:
 	int _attack;
 	int _defense;
 	int _experience;
+	int _score;
+	string _name;
 
 
 	int _x;

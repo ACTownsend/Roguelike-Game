@@ -6,11 +6,11 @@
 
 using namespace std;
 
-GameSystem::GameSystem(string levelFileName, int level, int health, int maxHealth, int attack, int defense, int experience)	//adam2
+GameSystem::GameSystem(string levelFileName, int level, int health, int maxHealth, int attack, int defense, int experience, int score)	//adam2
 {
-	_player.init(level, health, maxHealth, attack, defense, experience);
+	_player.init(level, health, maxHealth, attack, defense, experience, score);
 	
-	_level.load(levelFileName, _player, _shop);
+	_level.load(levelFileName, _player);
 	_level.print();
 
 
@@ -18,9 +18,10 @@ GameSystem::GameSystem(string levelFileName, int level, int health, int maxHealt
 
 
 
-void GameSystem::playGame()	//adam
+void GameSystem::playGame(string player_name)	//adam
 {
 	bool isDone = false;
+	_player.assignName(player_name);
 
 	while (isDone != true)
 	{
@@ -28,11 +29,12 @@ void GameSystem::playGame()	//adam
 		_level.print();
 		playerMove();
 		_level.updateMonsters(_player);
+		_player.updatescore();
 	}	
 }
 
 
-void GameSystem::playerMove()	//sh4zzy
+void GameSystem::playerMove()	//shazzy
 {
 
 
