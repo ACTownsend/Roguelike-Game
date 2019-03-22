@@ -1,7 +1,0 @@
-﻿  ConsoleApplication3.cpp
-  GameSystem.cpp
-c:\users\simoesnvc\source\repos\consoleapplication3\consoleapplication3\gamesystem.cpp(28): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  player.cpp
-c:\users\simoesnvc\source\repos\consoleapplication3\consoleapplication3\player.cpp(34): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  ConsoleApplication3.vcxproj -> C:\Users\simoesnvc\source\repos\ConsoleApplication3\Debug\ConsoleApplication3.exe
