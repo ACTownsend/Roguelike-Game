@@ -1,0 +1,19 @@
+﻿  ConsoleApplication1.cpp
+c:\users\adam\documents\uni\onedrive\onedrive - coventry university\consoleapplication1\consoleapplication1\consoleapplication1.cpp(111): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GameSystem.cpp
+  Level.cpp
+c:\users\adam\documents\uni\onedrive\onedrive - coventry university\consoleapplication1\consoleapplication1\include\libsqlite.hpp(221): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+c:\users\adam\documents\uni\onedrive\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(44): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\documents\uni\onedrive\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(46): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\documents\uni\onedrive\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(71): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\documents\uni\onedrive\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(131): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\documents\uni\onedrive\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(232): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\documents\uni\onedrive\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(319): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\adam\documents\uni\onedrive\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(380): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\adam\documents\uni\onedrive\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(447): warning C4018: '<': signed/unsigned mismatch
+c:\users\adam\documents\uni\onedrive\onedrive - coventry university\consoleapplication1\consoleapplication1\level.cpp(484): warning C4018: '<': signed/unsigned mismatch
+  monster.cpp
+c:\users\adam\documents\uni\onedrive\onedrive - coventry university\consoleapplication1\consoleapplication1\monster.cpp(35): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\adam\documents\uni\onedrive\onedrive - coventry university\consoleapplication1\consoleapplication1\monster.cpp(59): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  ConsoleApplication1.vcxproj -> C:\Users\Adam\Documents\uni\onedrive\OneDrive - Coventry University\ConsoleApplication1\Debug\ConsoleApplication1.exe
