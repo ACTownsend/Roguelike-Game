@@ -7,6 +7,7 @@
 #include <ctime>
 
 
+
 using namespace std;
 
 
@@ -29,6 +30,17 @@ public:
 	int printLeaderboard();
 
 
+	void EnemyHealth(int start, int stars);
+	void loadEnemy(string bossFileName);
+
+
+	void printEnemy();
+	void loadPlayer(string playerFileName);
+	void printPlayer();
+	void playerDamage(int dmg, int start, int stars);
+	void enemyDamage(int dmg1, int start, int stars2);
+	void playerHealth(int playerstart, int stars2);
+	void updateDatabase(Player &player);
 
 private:
 	vector <string> _levelData;
@@ -37,6 +49,10 @@ private:
 	void battleMonster(Player &player, int targetx, int targety);
 	vector <monster> _monsters;
 
+
+	//simon
+	vector < string > _bossData;
+	vector <string> _playerData;
 	
 };
 

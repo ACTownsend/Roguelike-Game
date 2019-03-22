@@ -40,6 +40,7 @@ void Player::getPosition(int &x, int &y)	//shazzy
 
 void Player::addEXP(int experience)	//lewis
 {
+	//adds experience to the user and levells them up if they reach more than 50 experience
 	_experience = _experience + experience;
 	while (_experience >= 50)
 	{
@@ -56,7 +57,7 @@ void Player::addEXP(int experience)	//lewis
 int Player::attack()	//dragos
 {
 	static default_random_engine randomEngine(time(NULL));
-	uniform_int_distribution <int> attackRoll(0, _attack);
+	uniform_int_distribution <int> attackRoll(1, _attack);
 	return attackRoll(randomEngine);
 }
 
@@ -74,6 +75,7 @@ void Player::heal() //dragos
 
 int Player::takeDamage(int attack) //lewis
 {
+	//takes damage from the enemy and subtracts the players armour value from the damage
 	attack -= _defense;
 	if (attack > 0)
 	{
@@ -87,8 +89,9 @@ int Player::takeDamage(int attack) //lewis
 	return 0;
 }
 
-void Player::updatescore()
+void Player::updatescore() //lewis
 {
+	//lowers the users score after every movement
 	_score = _score - 1;
 	if (_score <=0)
 	{
@@ -96,13 +99,15 @@ void Player::updatescore()
 	}
 }
 
-void Player::addScore()
+void Player::addScore() //lewis
 {
-	_score = _score + 50;
+	//adds to the user's score after they kill an enemy
+	_score = _score + 150;
 }
 
-void Player::assignName(string player_name)
+void Player::assignName(string player_name) //adam
 {
+	//sets the users name to whatever they input
 	_name = player_name;
 }
 

@@ -4,7 +4,7 @@
 #include <ctime>
 
 
-monster::monster(string name, char tile, int level, int attack, int defense, int health, int XP)	//costa
+monster::monster(string name, char tile, int level, int attack, int defense, int health, int XP, int maxHealth)	//costa
 {
 	_name = name;
 	_tile = tile;
@@ -13,6 +13,7 @@ monster::monster(string name, char tile, int level, int attack, int defense, int
 	_defense = defense;
 	_health = health;
 	_XPValue = XP;
+	_maxHealth = maxHealth;
 
 }
 
@@ -30,13 +31,15 @@ void monster::getPosition(int &x, int &y)	//simon
 
 int monster::attack()	//dragos
 {
+	//returns a random number between 1 and the user's attack stat
 	static default_random_engine randomEngine(time(NULL));
-	uniform_int_distribution <int> attackRoll(0, _attack);
+	uniform_int_distribution <int> attackRoll(1, _attack);
 	return attackRoll(randomEngine);
 }
 
 int monster::takeDamage(int attack)	//lewis
 {
+	//take an input of the attack roll, updates the health of the enemy or gives the user experience if killed
 	attack -= _defense;
 	if (attack>0)
 	{
@@ -52,6 +55,7 @@ int monster::takeDamage(int attack)	//lewis
 
 char monster::getMove(int playerX, int playerY)	//costa
 {
+	//takes an input of the players current X and Y position and returns a random movement key for the monster to move
 	static default_random_engine randEngine(time(NULL));
 	uniform_int_distribution <int> moveRoll(0, 8);
 	int distance;

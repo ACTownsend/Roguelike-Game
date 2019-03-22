@@ -99,8 +99,9 @@ wipe:
 	return 0;
 }
 
-string GameSystem::getName(string name)
+string GameSystem::getName(string name)		//adam
 {
+	//assigns the user name
 	name = player_name;
 	return name;
 }
@@ -108,16 +109,17 @@ string GameSystem::getName(string name)
 
 int main()	
 {
+	//picks a random level and then starts the game
 	static default_random_engine randomEngine(time(NULL));
-	uniform_int_distribution <int> levelGen(1, 5);
+	uniform_int_distribution <int> levelGen(1, 5);		//picks a random level between 1 and 5
 	char ranlevel = levelGen(randomEngine);
 
-	string levelNo = to_string(ranlevel);
-	string level = "level";
+	string levelNo = to_string(ranlevel);			//transforms the random number into a name of one of the text files
+	string level = "level";			
 	level.append(levelNo);
 	level.append(".txt");
 
-	GameSystem gameSystem(level, 1, 20, 20, 20, 5, 0, 100);
+	GameSystem gameSystem(level, 1, 20, 20, 20, 5, 0, 100);	//initialises the player with the base stats and the user inputted name
 	gameSystem.Menu();
 
 	gameSystem.playGame(player_name);

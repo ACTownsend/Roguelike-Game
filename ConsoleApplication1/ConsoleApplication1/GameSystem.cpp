@@ -6,8 +6,9 @@
 
 using namespace std;
 
-GameSystem::GameSystem(string levelFileName, int level, int health, int maxHealth, int attack, int defense, int experience, int score)	//adam2
+GameSystem::GameSystem(string levelFileName, int level, int health, int maxHealth, int attack, int defense, int experience, int score)	//adam
 {
+	//sets up the players stats and loads/prints the level
 	_player.init(level, health, maxHealth, attack, defense, experience, score);
 	
 	_level.load(levelFileName, _player);
@@ -20,6 +21,7 @@ GameSystem::GameSystem(string levelFileName, int level, int health, int maxHealt
 
 void GameSystem::playGame(string player_name)	//adam
 {
+	//plays the game indefinitely 
 	bool isDone = false;
 	_player.assignName(player_name);
 
@@ -36,7 +38,7 @@ void GameSystem::playGame(string player_name)	//adam
 
 void GameSystem::playerMove()	//shazzy
 {
-
+	
 
 	char input;
 

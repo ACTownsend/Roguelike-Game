@@ -4,7 +4,7 @@ using namespace std;
 class monster	
 {
 public:
-	monster(string name, char tile, int level, int attack, int defense, int health, int XP);
+	monster(string name, char tile, int level, int attack, int defense, int health, int XP, int maxHealth);
 
 	void setPosition(int x, int y);
 										//simon
@@ -15,11 +15,18 @@ public:
 		return _tile;		//dragos
 	}
 
-	int getDefense()
+	int getDefense()	//adam
 	{
 		return _defense;
 	}
-
+	int getHealth() //adam
+	{
+		return _health;
+	}
+	int getMaxHealth()	//simon
+	{
+		return _maxHealth;
+	}
 	int attack();	//dragos
 
 	int takeDamage(int attack);	//lewis
@@ -36,6 +43,7 @@ private:
 	int _defense;
 	int _health;
 	int _XPValue;
+	int _maxHealth;
 
 	int _x;
 	int _y;

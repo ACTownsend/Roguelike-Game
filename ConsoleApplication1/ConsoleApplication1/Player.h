@@ -19,19 +19,19 @@ public:
 
 
 
-	int getHealth()//adam2
+	int getHealth()//adam
 	{
 		return _health;
 	}
-	int getAttack()//adam2
+	int getAttack()//adam
 	{
 		return _attack;
 	}
-	int getLevel()//adam2
+	int getLevel()//adam
 	{
 		return _level;
 	}
-	int getMaxHealth()//adam2
+	int getMaxHealth()//adam
 	{
 		return _maxHealth;
 	}
@@ -39,15 +39,15 @@ public:
 	{
 		return _defense;
 	}
-	int getEXP()//adam2
+	int getEXP()//adam
 	{
 		return _experience;
 	}
-	int getScore()//adam2
+	int getScore()//adam
 	{
-		return _experience;
+		return _score;
 	}
-	string getName()//adam2
+	string getName()//adam
 	{
 		return _name;
 	}
